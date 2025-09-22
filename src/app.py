@@ -48,11 +48,11 @@ def generate_sandwich():
 def main():
     st.set_page_config(
         page_title="Infinite Sandwich Generator",
-        page_icon="🥪",
+        page_icon="⚡",
         layout="wide"
     )
     
-    st.title("🥪 Infinite Sandwich Generator")
+    st.title("Infinite Sandwich Generator")
     st.markdown(
         """**Absurdist, generative project that builds nonsense sandwiches from real and fictional ingredients, 
         scored by models trained on random data.**"""
@@ -79,19 +79,19 @@ def main():
     if "current_sandwich" in st.session_state:
         sandwich = st.session_state.current_sandwich
         
-        st.header(f"✨ {sandwich['name']}")
+        st.header(f"Current: {sandwich['name']}")
         
         col1, col2 = st.columns([2, 1])
         
         with col1:
-            st.subheader("🥗 Ingredients")
+            st.subheader("Ingredients")
             for ingredient in sandwich['ingredients']:
                 st.write(f"• {ingredient}")
             
-            st.subheader(f"🎭 Flavor Profile: {sandwich['flavor_profile'].title()}")
+            st.subheader(f"Flavor Profile: {sandwich['flavor_profile'].title()}")
         
         with col2:
-            st.subheader("📊 AI Scores")
+            st.subheader("AI Scores")
             scores = sandwich['scores']
             st.metric("Absurdity", f"{scores['absurdity']}/10")
             st.metric("Creativity", f"{scores['creativity']}/10")
@@ -102,7 +102,7 @@ def main():
     
     # Sandwich history
     if "sandwich_history" in st.session_state and st.session_state.sandwich_history:
-        st.header("📜 Sandwich History")
+        st.header("Sandwich History")
         
         # Create dataframe for history
         history_data = []
@@ -121,7 +121,7 @@ def main():
     # Footer
     st.markdown("---")
     st.markdown(
-        "🤖 *Powered by completely fictional AI models and random number generators. "
+        "*Powered by completely fictional AI models and random number generators. "
         "No actual sandwiches were harmed in the making of this application.*"
     )
 
