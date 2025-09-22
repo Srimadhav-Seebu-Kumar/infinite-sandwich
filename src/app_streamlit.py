@@ -15,7 +15,7 @@ from typing import Dict, Any, Optional
 
 def main():
     """Main Streamlit application entry point."""
-    st.title("🥪 Infinite Sandwich Generator")
+    st.title("Infinite Sandwich Generator")
     st.write("Generate absurd sandwich combinations with AI scoring!")
     
     # Placeholder UI elements
